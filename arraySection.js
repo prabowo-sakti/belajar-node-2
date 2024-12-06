@@ -17,3 +17,44 @@
 // let uniques = Array.from(set);
 
 // console.log(uniques);
+
+// const person = {
+//   firstName: "Prabowo",
+//   lastName: "Sakti",
+
+//   id: 1,
+//   favoriteColors: ["green", "blue"],
+//   adresses: {
+//     street: "Main St",
+//     number: 1,
+//   },
+//   fullname: function () {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+//   sayHi: function () {
+//     console.log("Hello!");
+//   },
+// };
+
+// console.log(person.fullname());
+
+// const person = {
+//   id: 12,
+//   name: "Prabowo Sakti",
+// };
+
+// delete person.name;
+
+// console.log(person.name);
+
+const users = {
+  admin: "Jane",
+  moderator: "Joe",
+  user: "Billy",
+};
+
+// Object.keys(users).forEach((role) => {
+//   console.log(`${users[role]} adalah seorang ${role}`);
+// });
+
+Object.entries(users).forEach(([key, value]) => console.log(key));
