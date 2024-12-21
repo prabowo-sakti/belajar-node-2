@@ -6,7 +6,9 @@
   "main": "index.js",
   "scripts": {
     "node-test": "node --test node_test/*.mjs",
-    "test": "jest"
+    "test": "jest",
+    "jest-test:coverage": "jest --coverage",
+    "node-test:coverage": "node --test --experimental-test-coverage node_test/*"
   },
   "keywords": [],
   "author": "",

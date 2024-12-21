@@ -1,8 +1,11 @@
-import { sum, multiply } from "./src/utils.mjs";
+import { sum, multiply } from "../src/utils.mjs";
 
-describe("sum.js", () => {
-  test("Add 1+2 to equal 3", () => {
+describe("Utils Test Suite: sum", () => {
+  it("Should sum two numbers", () => {
     expect(sum(1, 2)).toBe(3);
+  });
+  it("Should throw an error if we don't provide a valid number", () => {
+    expect(() => sum("1", 2)).toThrow("Please provide a valid number");
   });
 });
 

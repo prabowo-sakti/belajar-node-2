@@ -1,6 +1,6 @@
 import { describe, it } from "node:test";
 import assert from "node:assert";
-import { sum, multiply } from "../jest_test/src/utils.mjs";
+import { sum, multiply } from "../src/utils.mjs";
 
 describe("Serangkain test untuk: Sum", () => {
   it("Penjumlahan modul sum", () => {
@@ -10,6 +10,6 @@ describe("Serangkain test untuk: Sum", () => {
 
 describe("Serangkaian test untuk: multiply", () => {
   it("Perkalian modul multiply", () => {
-    assert.strictEqual(multiply(5, 3), 16);
+    assert.strictEqual(multiply(2, 3), 6);
   });
 });
