@@ -66,15 +66,64 @@
 // app.get("/", (req, res) => {
 //   res.status(200).set("Content-Type", "text/html").send("<h1>Hello World</h1>");
 // });
+// app.get("/about/me/challange", (req, res) => {
+//   res.redirect("..");
+// });
+
+// import express from "express";
+// import path from "node:path";
+// import { fileURLToPath } from "node:url";
+
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
+// const app = express();
+// const port = 3000;
+
+// app.get("/", (req, res) => {
+//   const filePath = path.join(__dirname, "laporan-keuangan.pdfs");
+//   res.sendFile(filePath, (err) => {
+//     if (err) {
+//       res.send("<h1>Error saat mengirim file</h1>");
+//       console.log(err);
+//     }
+//     res.set("Content-Type", "text/html");
+//   });
+// });
+
+// app.use((req, res, next) => {
+//   console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+//   next();
+// });
+
+// app.use()
+
+// app.use((req, res, next) => {
+//   req.lang = req.headers["accept-language"] || "id";
+//   next();
+// });
+
+// app.use((req, res, next) => {
+//   req.lang;
+// });
+
+// app.use((req, res, next) => {
+//   if (req.headers["user-agent"].includes("Firefox")) {
+//     res.send(
+//       "<h1>Sepertinya kamu menggunakan firefox, kemungkinan fitur dari situs ini tidak bekerja dengan optimal, tetapi jika semua fitur bekerja dengan baik, tetap gunakan firefox, tidak perlu mengubah ke chrome</h1>"
+//     );
+//   } else {
+//     next();
+//   }
+// });
+
+// app.get("/", (req, res) => {
+//   res.send("Kamu menggunakan google chrome");
+// });
 
 import express from "express";
 
 const app = express();
 const port = 3000;
-
-app.get("/about/me/challange", (req, res) => {
-  res.redirect("..");
-});
 
 app.listen(port, () => {
   console.log(`Aplikasi kamu jalan di port http://localhost:${port}`);
