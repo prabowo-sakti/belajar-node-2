@@ -125,6 +125,20 @@ import express from "express";
 const app = express();
 const port = 3000;
 
+app.get("/next-error", (req, res, next) => {
+  next(new Error("Ohh! terjadi kesalahan"));
+});
+
+app.get("/throw-error", (req, res) => {
+  throw new Error("Ohh! terjadi kesalahan");
+});
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+
+  res.status(500).send("Ohh! server membutuhkan perhatian");
+});
+
 app.listen(port, () => {
   console.log(`Aplikasi kamu jalan di port http://localhost:${port}`);
 });
